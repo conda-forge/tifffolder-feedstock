@@ -1,6 +1,6 @@
 {% set name = "tifffolder" %}
-{% set version = "0.1.7" %}
-{% set sha256 = "b54c9e9c4db4eb49c3aa2768eb8f7add798f3983e29a09717d8a58951f0c4881" %}
+{% set version = "0.1.8" %}
+{% set sha256 = "b7e82946c7ffe6d08d5b9d723a26deb942c040cec7977218079da4be59aac0bb" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 build:
   noarch: python
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -33,7 +33,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Easily parse/access a subset of data from a folder of TIFFs'
+  summary: Easily parse/access a subset of data from a folder of TIFFs
   description: |
     Parse filenames and lazily read subset of data from a folder 
     of images using numpy slicing syntax. Includes simplified file 
