@@ -1,6 +1,5 @@
 {% set name = "tifffolder" %}
 {% set version = "0.1.8" %}
-{% set sha256 = "b7e82946c7ffe6d08d5b9d723a26deb942c040cec7977218079da4be59aac0bb" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: b7e82946c7ffe6d08d5b9d723a26deb942c040cec7977218079da4be59aac0bb
 
 build:
   noarch: python
